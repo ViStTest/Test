@@ -88,17 +88,17 @@ $this->title = 'Test Application';
 <script>
     $(function ()
     {
-        //Обработка нажатия кнопок вызова формы добавления пользователя или аккаунта
-        $('#form-loaders').on('click', 'button', function (e)
+        // Обработка нажатия кнопок вызова формы добавления пользователя или аккаунта
+        $('#form-loaders').on('click', '.btn', function (e)
         {
             e.stopPropagation();
             var model = $(this).data('model');
 
-            //Загружаем форму
+            // Загружаем форму
             $.get('/' + model + '/ajax-create', function(response)
             {
-                $('body').append(response); //Добавляем на страницу
-                $('.modal').modal(); //Запускаем модальное окно с загруженной формой
+                $('body').append(response); // Добавляем на страницу
+                $('.modal').modal(); // Запускаем модальное окно с загруженной формой
             });
 
             return false;
