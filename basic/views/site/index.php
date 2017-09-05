@@ -88,7 +88,7 @@ $this->title = 'Test Application';
 <script>
     $(function ()
     {
-        //Обработка нажатия кнопки вызова формы добавления пользователя
+        //Обработка нажатия кнопок вызова формы добавления пользователя или аккаунта
         $('#form-loaders').on('click', 'button', function (e)
         {
             e.stopPropagation();
